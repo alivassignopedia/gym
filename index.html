@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>IRONFORGE Gym</title>
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#07060a;--ink:#f1e6d0;--dim:#f1e6d0;--gold:#e9b873;--glow:rgba(233,184,115,.35);--line:rgba(243,236,224,.14);--card:rgba(255,255,255,.04);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
@@ -231,6 +231,95 @@ footer ul a{transition:color .25s,padding-left .25s}footer ul a:hover{color:var(
 
 .stars,.st,.rc .stars{color:var(--gold)!important}
 ::placeholder{color:rgba(241,230,208,.6);opacity:1}
+
+/* ===== BOLD SIMPLE TYPOGRAPHY (Barlow) ===== */
+:root{--f:'Barlow',system-ui,-apple-system,'Segoe UI',Arial,sans-serif}
+body,button,input,select,textarea{font-family:var(--f)}
+body{font-weight:500;letter-spacing:0;line-height:1.6}
+
+/* one font family everywhere */
+h1,h2,h3,h4,p,li,small,summary,label,
+.sub,.kick,.tag,.btn,.chip,.logo span,.flogo b,.flogo span,.links a,
+.price,.price small,.stats b,.stats span,.res b,.rbig,.bar b,.rg em,.rg small,.dy b,.dy span,
+.pn b,.ph,.fmark,.ty,.rb,.tt .h,.tt .rl,.plan h3,.dc h4,.srw em,.seg button,
+footer h4,.pl b,.pl small,.pl i,.cc h3,.quote,.sum .t,.err,.tm,.leg,.legend,.bk,.toast,.av,.av2,.lv small{
+  font-family:var(--f)!important;
+}
+
+/* body text: medium weight, easy to read */
+p,li,.card p,.head p,.fabout,.empty,.tm,.leg,.legend,input,select,textarea,.bk{font-weight:500}
+.card p{font-size:16px}
+.head p{font-size:17px}
+small,.err{font-weight:600}
+::placeholder{font-weight:500}
+
+/* hero */
+h1{font-weight:900;text-transform:uppercase;letter-spacing:.01em;line-height:.9;font-size:clamp(96px,19vw,250px)}
+.sub{font-weight:800;text-transform:uppercase;letter-spacing:.06em}
+.kick,.tag{font-weight:700;text-transform:uppercase;letter-spacing:.2em;font-size:13px}
+.tag{line-height:2}
+
+/* headings */
+.head h2,.band h2{font-weight:800;text-transform:none;letter-spacing:-.01em;line-height:1.05}
+.card h3,.pn h3{font-weight:800;text-transform:uppercase;letter-spacing:.05em;font-size:19px}
+.cc h3{font-weight:800;text-transform:none;letter-spacing:0;font-size:26px}
+.plan h3{font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:16px}
+summary{font-weight:700;font-size:18px}
+
+/* buttons, nav, chips */
+.btn{font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:15px}
+.chip,.seg button{font-weight:700;text-transform:none;letter-spacing:.02em;font-size:14px}
+.links a{font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:14px}
+.logo span,.flogo b{font-weight:800;text-transform:uppercase;letter-spacing:.18em}
+.flogo span{font-weight:600;letter-spacing:.3em}
+.toast{font-weight:700}
+
+/* small labels: bold, uppercase, moderate spacing */
+label,.dc h4,.tt .h,.tt .rl,.ty,footer h4,.dy span,.rg small,.lv small,.stats span{font-weight:700;text-transform:uppercase;letter-spacing:.12em}
+label,.dc h4{font-size:13px}
+.legend,.leg{font-size:14px;font-weight:600}
+.rb{font-weight:700;letter-spacing:.04em}
+
+/* numbers: extra heavy */
+.price,.stats b,.res b,.rbig,.bar b,.rg em,.dy b,.pn b,.ph,.srw em{font-weight:800}
+.bar b{font-size:20px}
+.price small{font-weight:600}
+
+/* class cards on the schedule */
+.pl b{font-weight:700;font-size:14px}
+.pl small{font-weight:600;font-size:12px}
+.pl i{font-weight:600}
+.tt .h,.tt .rl{font-size:12px}
+
+/* review quotes: sentence case, readable */
+.quote{font-weight:600;text-transform:none;letter-spacing:0;font-size:19px}
+.sum .t{font-weight:800;font-size:24px}
+.fmark{font-weight:900;-webkit-text-stroke:1px rgba(233,184,115,.25)}
+.dc text{font-weight:600}
+.st,.stars{font-family:system-ui,sans-serif!important}
+
+/* ===== CENTER RING NUMBERS ===== */
+.rg{display:flex;flex-direction:column;align-items:center}
+.rg svg{display:block;margin:0 auto}
+.rg em{
+  position:absolute;
+  top:0;
+  left:50%;
+  width:120px;
+  height:120px;
+  margin-left:-60px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  line-height:1;
+  font-style:normal;
+}
+
+@media(max-width:820px){
+  h1{font-size:clamp(84px,26vw,160px)}
+  .links a{font-size:12px;letter-spacing:.06em}
+}
+/* ===== END TYPOGRAPHY ===== */
 </style>
 </head>
 <body>
