@@ -320,6 +320,61 @@ label,.dc h4{font-size:13px}
   .links a{font-size:12px;letter-spacing:.06em}
 }
 /* ===== END TYPOGRAPHY ===== */
+
+/* ===== BUSIEST HOURS: slower + restarts from the beginning ===== */
+.lp{stroke-dashoffset:1;transition:none!important;animation:none}
+.dc.in .lp{animation:hoursDraw 3.5s cubic-bezier(.4,0,.2,1) forwards}
+
+.la{opacity:0;transition:none!important;animation:none}
+.dc.in .la{animation:hoursFade 1.6s 3s ease forwards}
+
+.pk{opacity:0;animation:none}
+.dc.in .pk{animation:hoursFade .6s 4.2s ease forwards,pk 1.6s 4.8s infinite}
+
+@keyframes hoursDraw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes hoursFade{from{opacity:0}to{opacity:1}}
+/* ===== END BUSIEST HOURS ===== */
+
+/* Phone layouts */
+@media(max-width:600px){
+  html{scroll-padding-top:82px}
+  section{padding:64px 20px}
+  nav{padding:10px 12px 0}
+  .pill{width:100%;justify-content:center;gap:0;padding:5px;border-radius:18px}
+  .links{width:100%;justify-content:space-between;gap:2px}
+  .links a{flex:1;text-align:center;padding:12px 5px;font-size:11px;letter-spacing:.02em;white-space:nowrap}
+  .hero{padding:56px 20px 32px;gap:0;min-height:0;grid-template-columns:minmax(0,1fr)}
+  .hero::before{right:-44vw;top:18%;width:110vw;height:110vw}
+  .kick{font-size:11px;letter-spacing:.12em;gap:9px}.kick::before{width:24px;flex:none}
+  h1{font-size:clamp(76px,25vw,132px);margin-top:18px}
+  .sub{font-size:clamp(25px,8vw,38px);letter-spacing:.04em}
+  .tag{font-size:11px;letter-spacing:.12em;line-height:1.8}
+  .hero .btn{margin:22px 8px 0 0;padding:13px 18px;font-size:13px}
+  .stage{height:260px;margin-top:12px}
+  .head{margin-bottom:26px}.head h2{font-size:clamp(30px,9vw,42px)}.head p{font-size:16px}
+  .grid,.plans,.cgrid,.dash{grid-template-columns:minmax(0,1fr);gap:14px}
+  .g4{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .card,.cc,.dc,.plan{padding:20px;border-radius:18px}
+  .g4 .card{padding:14px}.g4 .card h3{font-size:15px}.g4 .card p{font-size:14px}.ph{font-size:42px}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:26px}
+  .sc{padding:20px 10px;border-radius:18px}.srw{width:100px;height:100px}.stats .sc b{font-size:28px}.sc>span{font-size:14px}.sc small{font-size:11px}
+  .tool{grid-template-columns:minmax(0,1fr);gap:18px}.res{padding:22px;min-height:130px}.res b{font-size:52px}
+  .seg{display:flex;width:100%;justify-content:space-between}.seg button{flex:1;padding:10px 6px;font-size:13px}
+  .price{font-size:42px}.sum{padding:20px;border-radius:18px}
+  .scene{height:330px;margin:0 -20px}.ring{width:174px;height:250px}.pn{padding:17px;transform:rotateY(calc(var(--i)*60deg)) translateZ(196px)}.pn b{font-size:52px;left:17px}.pn h3{font-size:17px}
+  .ctl{flex-wrap:wrap;gap:8px}.ctl .btn{padding:11px 14px;font-size:12px}
+  .gal{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:150px;gap:10px}.gt{border-radius:16px}.gt figcaption{left:12px;bottom:10px;font-size:10px;letter-spacing:.14em}.gt figcaption small{font-size:10px}.gt svg{width:58%}
+  .bars{gap:7px;height:200px}.bar{font-size:10px}.bar b{font-size:15px}.dc{min-width:0}.dcw{justify-content:center;gap:12px}.donut{width:125px;height:125px}.leg{font-size:12px}.rings{gap:14px}.rg svg,.rg em{width:96px;height:96px}.rg em{left:50%;margin-left:-48px;font-size:25px}.rg small{font-size:10px;letter-spacing:.06em}
+  .goal{gap:8px}.goal b{width:100%;margin:0 0 2px}.chip{padding:9px 12px;font-size:12px}
+  .tt-wrap{border-radius:16px}.tt{grid-template-columns:74px repeat(7,minmax(112px,1fr));min-width:858px}.tt>div{padding:9px 7px;min-height:64px}.tt .h{font-size:10px;letter-spacing:.08em;padding:12px 5px}.tt .rl{font-size:10px;letter-spacing:.08em}.pl{padding:8px 7px}.pl b{font-size:12px}.pl small,.pl i{font-size:10px}.legend{gap:10px;font-size:12px}
+  .bk{align-items:flex-start;font-size:13px;padding:12px;overflow-wrap:anywhere}.bk button{flex:none;min-height:40px}
+  .rtop{gap:12px;margin:0 0 24px}.rbig{font-size:64px}.st{font-size:20px;letter-spacing:3px}.rc{width:min(280px,82vw);padding:18px}.rc .quote{font-size:17px}
+  .band{margin:0 20px 56px;padding:44px 22px;border-radius:22px}.band h2{font-size:clamp(32px,9vw,46px)}
+  footer{padding:60px 20px 0}.fgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 18px}.fgrid>div:first-child{grid-column:1/-1}.flogo svg{width:52px;height:52px}.flogo b{font-size:20px;letter-spacing:.12em}.flogo span{font-size:9px;letter-spacing:.16em}.fabout{font-size:14px}footer h4{font-size:11px;letter-spacing:.12em}footer ul{font-size:14px}.fmark{font-size:18vw}.fbar{margin-top:48px;padding:18px 0 calc(22px + env(safe-area-inset-bottom,0px));font-size:10px;letter-spacing:.08em}
+  .box{padding:22px;width:min(440px,100%);max-height:calc(100dvh - 32px);overflow-y:auto}.modal{padding:16px}.toast{width:max-content;max-width:calc(100vw - 32px);text-align:center;font-size:14px}
+  .btn{min-height:44px}input,select,textarea{font-size:16px}
+}
+@media(max-width:360px){section{padding-inline:16px}.hero{padding-inline:16px}nav{padding-inline:8px}.links a{font-size:10px;padding-inline:3px}.g4{grid-template-columns:1fr}.scene{margin-inline:-16px}.ctl .btn{padding-inline:11px}}
 </style>
 </head>
 <body>
